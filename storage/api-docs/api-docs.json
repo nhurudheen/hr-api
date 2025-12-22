@@ -1,0 +1,99 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "HR API",
+        "description": "API documentation for HR API",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000"
+        }
+    ],
+    "paths": {
+        "/api/v1/utility/ping": {
+            "get": {
+                "tags": [
+                    "General Endpoint"
+                ],
+                "description": "Check API alive",
+                "operationId": "04cb6522e36dc9dce523f72525df8a6e",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/utility/status-quote": {
+            "post": {
+                "tags": [
+                    "General Endpoint"
+                ],
+                "operationId": "555fd87a97a1954c1e51bbd66f95ffa7",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SampleRequestSchema"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SampleRequestSchema": {
+                "required": [
+                    "name",
+                    "age"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "John Doe"
+                    },
+                    "age": {
+                        "type": "integer",
+                        "example": 25
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "x-api-key": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "x-api-key",
+                "description": "General API key for access"
+            },
+            "Bearer Token": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT",
+                "description": "JWT authorization header"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "General Endpoint",
+            "description": "General Endpoint"
+        }
+    ],
+    "security": [
+        {
+            "x-api-key": [],
+            "Bearer Token": []
+        }
+    ]
+}
