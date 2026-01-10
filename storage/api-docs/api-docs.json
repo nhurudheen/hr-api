@@ -16,8 +16,22 @@
                 "tags": [
                     "General Endpoint"
                 ],
-                "description": "Check API alive",
+                "summary": "Ping API",
                 "operationId": "04cb6522e36dc9dce523f72525df8a6e",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/utility/ror": {
+            "get": {
+                "tags": [
+                    "General Endpoint"
+                ],
+                "summary": "ROR Status Check",
+                "operationId": "7c04d41fadb8baaa95be7dfb944a5135",
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -30,6 +44,7 @@
                 "tags": [
                     "General Endpoint"
                 ],
+                "summary": "Generate Status Quote",
                 "operationId": "555fd87a97a1954c1e51bbd66f95ffa7",
                 "requestBody": {
                     "required": true,
@@ -41,6 +56,20 @@
                         }
                     }
                 },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/utility/xyz": {
+            "get": {
+                "tags": [
+                    "Rorkeb Endpoint"
+                ],
+                "summary": "Ror",
+                "operationId": "3c5a986424c97f66d0b56b20eb796ff7",
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -64,6 +93,10 @@
                     "age": {
                         "type": "integer",
                         "example": 25
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": ""
                     }
                 },
                 "type": "object"
@@ -88,6 +121,10 @@
         {
             "name": "General Endpoint",
             "description": "General Endpoint"
+        },
+        {
+            "name": "Rorkeb Endpoint",
+            "description": "Rorkeb Endpoint"
         }
     ],
     "security": [

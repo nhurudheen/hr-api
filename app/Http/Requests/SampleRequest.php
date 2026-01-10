@@ -26,6 +26,7 @@ class SampleRequest extends BaseRequest
         return [
             'name' => ['required', 'string'],
             'age' => ['required', 'integer'],
+            'email' => ['nullable', 'email'],
         ];
     }
 }

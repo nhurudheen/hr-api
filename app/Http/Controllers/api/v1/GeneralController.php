@@ -6,9 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SampleRequest;
 use App\Traits\JsonResponseTrait;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use OpenApi\Annotations as OA;
+
 
 class GeneralController extends Controller
 {
@@ -23,5 +21,10 @@ class GeneralController extends Controller
     {
         $data = $request->validated();
         return $this->successResponse(message: 'Status Working Successful'.$data['name']);
+    }
+
+    public function rokeeb(): JsonResponse
+    {
+        return $this->successResponse(message: 'Rorkeeb is Learning Successful');
     }
 }

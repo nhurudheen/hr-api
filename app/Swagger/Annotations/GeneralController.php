@@ -7,12 +7,21 @@ use OpenApi\Annotations as OA;
 /**
  * @OA\Get(
  *     path="/api/v1/utility/ping",
+ *     summary="Ping API",
+ *     tags={"General Endpoint"},
+ *     @OA\Response(response=200, description="Success")
+ * )
+ *
+ * @OA\Get(
+ *     path="/api/v1/utility/ror",
+ *     summary="ROR Status Check",
  *     tags={"General Endpoint"},
  *     @OA\Response(response=200, description="Success")
  * )
  *
  * @OA\Post(
  *     path="/api/v1/utility/status-quote",
+ *     summary="Generate Status Quote",
  *     tags={"General Endpoint"},
  *     @OA\RequestBody(
  *         required=true,

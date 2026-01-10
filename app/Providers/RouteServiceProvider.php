@@ -22,8 +22,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         RateLimiter::for('api', static function (Request $request) {
             return [
-                Limit::perMinute(100)->by($request->ip()),
-                Limit::perSecond(5)->by($request->ip()),
+                Limit::perMinute(50)->by($request->ip()),
+                Limit::perSecond(2)->by($request->ip()),
             ];
         });
 
@@ -42,6 +42,7 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->group(function () {
                 include base_path('routes/v1/general.php');
+                include base_path('routes/v1/rokeeb.php');
             });
     }
 
