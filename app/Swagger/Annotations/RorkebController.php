@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Swagger\Annotations;
+
 use OpenApi\Annotations as OA;
 
 /**
@@ -12,5 +14,4 @@ use OpenApi\Annotations as OA;
  * */
 class RorkebController
 {
-
 }

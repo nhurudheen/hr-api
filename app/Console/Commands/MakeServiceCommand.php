@@ -19,10 +19,10 @@ class MakeServiceCommand extends Command
 
         $className = class_basename($name);
         $namespace = 'App\\Services\\' . str_replace(
-                '/',
-                '\\',
-                dirname(str_replace('\\', '/', $name))
-            );
+            '/',
+            '\\',
+            dirname(str_replace('\\', '/', $name))
+        );
 
         if (File::exists($path)) {
             $this->error("Service already exists at {$path}");

@@ -7,7 +7,6 @@ use App\Http\Requests\SampleRequest;
 use App\Traits\JsonResponseTrait;
 use Illuminate\Http\JsonResponse;
 
-
 class GeneralController extends Controller
 {
     use JsonResponseTrait;
@@ -22,6 +21,7 @@ class GeneralController extends Controller
         $data = $request->validated();
         return $this->successResponse(message: 'Status Working Successful'.$data['name']);
     }
+
 
     public function rokeeb(): JsonResponse
     {

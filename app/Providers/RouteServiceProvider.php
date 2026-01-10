@@ -31,7 +31,7 @@ class RouteServiceProvider extends ServiceProvider
             ->group(
                 function () {
                     $this->generalRoutes();
-//                    $this->accountRoutes();
+                    //                    $this->accountRoutes();
                 }
             );
     }
@@ -48,13 +48,13 @@ class RouteServiceProvider extends ServiceProvider
 
 
 
-//    public function accountRoutes(): void
-//    {
-//        Route::middleware(['access.token'])
-//            ->prefix('api/v1/account/')
-//            ->namespace($this->namespace)
-//            ->group(function () {
-//                include base_path('routes/v1/account.php');
-//            });
-//    }
+    //    public function accountRoutes(): void
+    //    {
+    //        Route::middleware(['access.token'])
+    //            ->prefix('api/v1/account/')
+    //            ->namespace($this->namespace)
+    //            ->group(function () {
+    //                include base_path('routes/v1/account.php');
+    //            });
+    //    }
 }

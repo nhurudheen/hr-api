@@ -70,7 +70,7 @@ class MakeSwaggerSchema extends Command
             }
         }
 
-        $requiredLine = !empty($required) ? 'required={"'.implode('","',$required).'"}' : '';
+        $requiredLine = !empty($required) ? 'required={"'.implode('","', $required).'"}' : '';
 
         $schemaName = class_basename($requestClass).'Schema';
 
@@ -91,8 +91,10 @@ class MakeSwaggerSchema extends Command
         $content .= "class {$schemaName}\n{\n    // Empty class, annotations only\n}\n";
 
         // Create folder if it doesn't exist
-        $dir = app_path('Swagger/Schemas' . ($folder ? "/{$folder}" : ""));
-        if (!is_dir($dir)) mkdir($dir, 0755, true);
+        $dir = app_path('Swagger/Schemas' . ($folder ? "/{$folder}" : ''));
+        if (!is_dir($dir)) {
+            mkdir($dir, 0755, true);
+        }
 
         $filePath = $dir.'/'.$schemaName.'.php';
         file_put_contents($filePath, $content);

@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use App\Helpers\BaseRequest;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Foundation\Http\FormRequest;
 
 class SampleRequest extends BaseRequest
 {

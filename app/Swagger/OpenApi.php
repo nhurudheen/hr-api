@@ -29,4 +29,6 @@ use OpenApi\Annotations as OA;
  *     bearerFormat="JWT"
  * )
  */
-class OpenApi {}
+class OpenApi
+{
+}
