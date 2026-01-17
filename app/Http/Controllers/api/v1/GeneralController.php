@@ -22,9 +22,4 @@ class GeneralController extends Controller
         return $this->successResponse(message: 'Status Working Successful'.$data['name']);
     }
 
-
-    public function rokeeb(): JsonResponse
-    {
-        return $this->successResponse(message: 'Rorkeeb is Learning Successful');
-    }
 }

@@ -31,7 +31,7 @@ class RouteServiceProvider extends ServiceProvider
             ->group(
                 function () {
                     $this->generalRoutes();
-                    //                    $this->accountRoutes();
+                    //$this->accountRoutes();
                 }
             );
     }
@@ -42,7 +42,6 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->group(function () {
                 include base_path('routes/v1/general.php');
-                include base_path('routes/v1/rokeeb.php');
             });
     }
 

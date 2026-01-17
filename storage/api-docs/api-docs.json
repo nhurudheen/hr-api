@@ -62,20 +62,6 @@
                     }
                 }
             }
-        },
-        "/api/v1/utility/xyz": {
-            "get": {
-                "tags": [
-                    "Rorkeb Endpoint"
-                ],
-                "summary": "Ror",
-                "operationId": "3c5a986424c97f66d0b56b20eb796ff7",
-                "responses": {
-                    "200": {
-                        "description": "Success"
-                    }
-                }
-            }
         }
     },
     "components": {
@@ -121,10 +107,6 @@
         {
             "name": "General Endpoint",
             "description": "General Endpoint"
-        },
-        {
-            "name": "Rorkeb Endpoint",
-            "description": "Rorkeb Endpoint"
         }
     ],
     "security": [
