@@ -12,7 +12,6 @@ use OpenApi\Annotations as OA;
  *     @OA\Response(response=200, description="Success")
  * )
  *
- *
  * @OA\Post(
  *     path="/api/v1/utility/status-quote",
  *     summary="Generate Status Quote",

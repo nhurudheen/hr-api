@@ -25,20 +25,6 @@
                 }
             }
         },
-        "/api/v1/utility/ror": {
-            "get": {
-                "tags": [
-                    "General Endpoint"
-                ],
-                "summary": "ROR Status Check",
-                "operationId": "7c04d41fadb8baaa95be7dfb944a5135",
-                "responses": {
-                    "200": {
-                        "description": "Success"
-                    }
-                }
-            }
-        },
         "/api/v1/utility/status-quote": {
             "post": {
                 "tags": [
